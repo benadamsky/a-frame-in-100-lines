@@ -2,18 +2,18 @@ import { getFrameMetadata } from '@coinbase/onchainkit';
 import type { Metadata } from 'next';
 
 const frameMetadata = getFrameMetadata({
-  buttons: ['Next image'],
-  image: 'https://zizzamia.xyz/park-1.png',
-  post_url: 'https://zizzamia.xyz/api/frame',
+  buttons: ['Redeem to wallet, Donate to purple, 50/50 (You/Purple)'],
+  image: '/reward-unlocked.png',
+  post_url: `${process.env.VERCEL_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
-  title: 'zizzamia.xyz',
-  description: 'LFG',
+  title: 'weponder.io',
+  description: 'Frame app',
   openGraph: {
-    title: 'zizzamia.xyz',
-    description: 'LFG',
-    images: ['https://zizzamia.xyz/park-1.png'],
+    title: 'Ponder Rewards',
+    description: 'Frame app',
+    images: ['/reward-unlocked.png'],
   },
   other: {
     ...frameMetadata,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>weponder.io</h1>
     </>
   );
 }
