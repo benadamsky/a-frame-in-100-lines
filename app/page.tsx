@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 const frameMetadata = getFrameMetadata({
   buttons: ['Redeem to wallet', 'Donate to purple', '50/50 (You/Purple)'],
   image: '/reward-unlocked.png',
-  post_url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/frame`,
+  post_url: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/frame`,
 });
 
 export const metadata: Metadata = {
