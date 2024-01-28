@@ -10,12 +10,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     console.error(err);
   }
 
-  if (accountAddress) {
-    return new NextResponse(JSON.stringify({ accountAddress }), {
-      headers: { 'content-type': 'application/json' },
-    });
-  }
-
   return new NextResponse(`<!DOCTYPE html><html><head>
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:image" content="https://${process.env.NEXT_PUBLIC_VERCEL_URL}/reward-redeemed.png" />
